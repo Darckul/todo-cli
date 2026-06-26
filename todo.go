@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-const dataFile = "tasks.json"
+var dataFile = "tasks.json"
 
 type Task struct {
 	ID   int    `json:"id"`
