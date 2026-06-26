@@ -17,7 +17,7 @@ A command-line task manager written in Go. Tasks are stored locally in a JSON fi
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/todo-cli.git
+git clone https://github.com/Darckul/todo-cli.git
 cd todo-cli
 go build -o todo .
 ```
