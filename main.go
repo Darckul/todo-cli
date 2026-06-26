@@ -59,8 +59,7 @@ func cmdAdd() {
 	fmt.Printf("Добавлено [%d]: %s\n", newTask.ID, newTask.Text)
 }
 
-// nextID возвращает ID на 1 больше максимального существующего.
-// len(tasks)+1 не подходит: после удаления задачи ID могут совпасть.
+
 func nextID(tasks []Task) int {
 	max := 0
 	for _, t := range tasks {
@@ -112,7 +111,7 @@ func cmdDone() {
 
 	for i, t := range tasks {
 		if t.ID == id {
-			tasks[i].Done = true // tasks[i], не t — иначе меняем копию, не оригинал
+			tasks[i].Done = true 
 			if err := save(tasks); err != nil {
 				fmt.Println("Ошибка сохранения:", err)
 				os.Exit(1)
@@ -146,7 +145,7 @@ func cmdDelete() {
 
 	for i, t := range tasks {
 		if t.ID == id {
-			// вырезаем элемент i: склеиваем часть до и часть после
+			
 			tasks = append(tasks[:i], tasks[i+1:]...)
 			if err := save(tasks); err != nil {
 				fmt.Println("Ошибка сохранения:", err)
